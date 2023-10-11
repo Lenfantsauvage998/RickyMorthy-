@@ -1,3 +1,20 @@
+body {
+    font-family: 'get_schwifty.ttf', cursive; /* Reemplaza 'Get Schwifty' con el nombre real del archivo de tu fuente */
+    background-color: hsl(84, 100%, 81%);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+h1{
+    display: flex;
+    margin: 20px;
+    justify-content : center;
+}
 .navbar {
     background-color: red;
 }
@@ -5,10 +22,40 @@
     margin: 20px;
     background: fixed;
 }
+.input {
+    display: flex;
+    justify-content : center; 
+    width: 20px;
+    border-radius: 2px;
+}
 .newParagraph{
     display: flex;
-    margin: 20px;
     justify-content : center; 
-    font-family: Arial, Helvetica, sans-serif;
+    flex-wrap: wrap;
+    margin: 20px;
     align-items : center ;
+}
+
+.button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    background-color: #00ccff; /* Color de fondo azul claro */
+    color: #fff; /* Texto blanco */
+    font-family: 'get_schwifty.ttf', cursive;
+    padding: 10px ; /* Relleno interno */
+    font-size: 22px; /* Tamaño de fuente */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Esquinas redondeadas */
+    cursor: pointer; /* Cursor al pasar por encima */
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+
+    /* Estilo adicional para un aspecto más divertido */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra del texto */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra del botón */
+ }
+
+ .button:hover {
+    background-color: #0099cc; /* Cambia el color de fondo al pasar el mouse */
 }
