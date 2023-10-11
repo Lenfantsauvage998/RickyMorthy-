@@ -1,0 +1,14 @@
+.navbar {
+    background-color: red;
+}
+.attemp {
+    margin: 20px;
+    background: fixed;
+}
+.newParagraph{
+    display: flex;
+    margin: 20px;
+    justify-content : center; 
+    font-family: Arial, Helvetica, sans-serif;
+    align-items : center ;
+}
