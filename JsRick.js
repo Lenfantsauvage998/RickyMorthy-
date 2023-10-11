@@ -1,19 +1,7 @@
-let input = document.querySelector("#input");
-
+const input = document.querySelector("#input");
 const attemp = document.getElementById("attemp");
 const pic = document.getElementById("pic");
 
-const spaceInBlank = () => {
-    if(input.value >'1') {
-        input.value 
-        return
-    }else{ 
-        input.value = '1'
-        return
-    }
-
-}
-    spaceInBlank();
 
 function traerinfo(api) {
     const newParagraph = document.createElement("div");
@@ -42,10 +30,20 @@ function traerinfo(api) {
 }
 
 
+function spaceInBlank() {
+    const inputValues = input.value.trim();
+    
+    if(inputValues.includes(",")){
+        let palabras = inputValues.split(",");
+        for (let i = 0; i < palabras.length; i++) {
+            traerinfo(`https://rickandmortyapi.com/api/character/${palabras[i]}`);
+        }
+    }else 
+         traerinfo(`https://rickandmortyapi.com/api/character/${inputValues}`);
+}
+
+
 document.getElementById("miBoton").addEventListener("click", function() {
     spaceInBlank();
 });
 
-document.getElementById("miBoton").addEventListener("click", function() {
-    traerinfo(`https://rickandmortyapi.com/api/character/${input.value}`);
-});
